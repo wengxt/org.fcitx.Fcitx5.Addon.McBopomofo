@@ -37,7 +37,7 @@ flatpak build-bundle \
   org.fcitx.Fcitx5.Addon.McBopomofo.flatpak \
   org.fcitx.Fcitx5.Addon.McBopomofo \
   stable
----
+```
 
 This exports a runtime (since fcitx5-mcbopofo is an add-on of fcitx5) instead
 of an app. The resulting flatpak file is
