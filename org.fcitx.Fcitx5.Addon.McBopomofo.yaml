@@ -2,7 +2,7 @@ app-id: org.fcitx.Fcitx5.Addon.McBopomofo
 branch: stable
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//5.15-22.08
+sdk: org.kde.Sdk//6.6
 build-extension: true
 appstream-compose: false
 separate-locales: false
