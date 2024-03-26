@@ -20,20 +20,40 @@ modules:
   - name: fmt
     buildsystem: cmake-ninja
     config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
       - -DFMT_TEST=Off
       - -DBUILD_SHARED_LIBS=ON
     sources:
       - type: git
         url: https://github.com/fmtlib/fmt
         tag: 9.1.0
+    cleanup:
+      - /include
+      - /lib/cmake
+      - /lib/pkgconfig
+  - name: json-c
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DENABLE_THREADING=ON
+      - -DENABLE_RDRAND=OFF
+    sources:
+      - type: git
+        url: https://github.com/json-c/json-c/
+        tag: json-c-0.16-20220414
+    cleanup:
+      - /include
+      - /lib/cmake
+      - /lib/pkgconfig
   - name: fcitx5-mcbopomofo
     buildsystem: cmake-ninja
     sources:
       - type: git
         url: https://github.com/openvanilla/fcitx5-mcbopomofo
-        tag: 2.5.2
-        commit: cd0db9ff0626ee603aa5cdf484da995729e0ba42
+        tag: 2.7
+        commit: 6e3ab946f27368a10ee59ccde34e1eefdd65beed
     config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
       - -DENABLE_TEST=Off
     post-install:
       - appstream-compose --basename=org.fcitx.Fcitx5.Addon.McBopomofo --prefix=${FLATPAK_DEST} --origin=flatpak org.fcitx.Fcitx5.Addon.McBopomofo
