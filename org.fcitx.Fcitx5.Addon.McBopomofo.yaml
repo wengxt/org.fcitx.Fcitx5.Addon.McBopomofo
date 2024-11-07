@@ -50,8 +50,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/openvanilla/fcitx5-mcbopomofo
-        tag: 2.7
-        commit: 6e3ab946f27368a10ee59ccde34e1eefdd65beed
+        tag: 2.8.1
+        commit: 175894bf2f9366518248502d513836b6361066ab
+        x-checker-data:
+          type: git
+          tag-pattern: "^([\\d.]+)$"
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DENABLE_TEST=Off
