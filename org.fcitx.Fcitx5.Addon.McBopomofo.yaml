@@ -2,7 +2,7 @@ app-id: org.fcitx.Fcitx5.Addon.McBopomofo
 branch: stable
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//6.6
+sdk: org.kde.Sdk//6.8
 build-extension: true
 appstream-compose: false
 separate-locales: false
@@ -26,7 +26,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/fmtlib/fmt
-        tag: 9.1.0
+        tag: 11.0.2
     cleanup:
       - /include
       - /lib/cmake
@@ -58,5 +58,3 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DENABLE_TEST=Off
-    post-install:
-      - appstream-compose --basename=org.fcitx.Fcitx5.Addon.McBopomofo --prefix=${FLATPAK_DEST} --origin=flatpak org.fcitx.Fcitx5.Addon.McBopomofo
