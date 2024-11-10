@@ -4,7 +4,6 @@ runtime: org.fcitx.Fcitx5
 runtime-version: stable
 sdk: org.kde.Sdk//6.8
 build-extension: true
-appstream-compose: false
 separate-locales: false
 build-options:
   prefix: /app/addons/McBopomofo
