@@ -7,13 +7,13 @@ build-extension: true
 separate-locales: false
 build-options:
   prefix: /app/addons/McBopomofo
-  prepend-pkg-config-path: "/app/addons/McBopomofo/lib/pkgconfig:/app/addons/McBopomofo/share/pkgconfig"
+  prepend-pkg-config-path: /app/addons/McBopomofo/lib/pkgconfig:/app/addons/McBopomofo/share/pkgconfig
 cleanup:
   - /bin
   - /include
   - /lib/pkgconfig
   - /share/pkgconfig
-  - "*.la"
+  - '*.la'
   - /lib/cmake
 modules:
   - name: fmt
@@ -49,11 +49,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/openvanilla/fcitx5-mcbopomofo
-        tag: 2.8.1
-        commit: 175894bf2f9366518248502d513836b6361066ab
+        tag: 2.9.0
+        commit: d8716defa2a74d5f24d63a9af2ff531164b51504
         x-checker-data:
           type: git
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DENABLE_TEST=Off
