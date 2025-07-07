@@ -2,7 +2,7 @@ app-id: org.fcitx.Fcitx5.Addon.McBopomofo
 branch: stable
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//6.8
+sdk: org.kde.Sdk//6.9
 build-extension: true
 separate-locales: false
 build-options:
@@ -49,8 +49,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/openvanilla/fcitx5-mcbopomofo
-        tag: 2.9.1
-        commit: 98518be908dbee1408fd2a62256976819c282b69
+        tag: 2.9.2
+        commit: add05f32b0c3595878061fb8dfd9398a186fb80e
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
